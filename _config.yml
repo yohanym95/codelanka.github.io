@@ -9,7 +9,11 @@ title: "GDG DevFest Season 2014"
 email: "gdgsrilanka@gmail.com"
 description: "GDG DevFest is a set of events all around the world.2nd time in Sri Lanka"
 baseurl: ""
+<<<<<<< HEAD
 url: "http://codelanka.github.io"
+=======
+url: "http://codelanka.github.io/"
+>>>>>>> origin/gh-pages
 permalink: "/blog/:title"
 googleAnalyticsTrackingId: ""
 googleAnalyticsSiteUrl: ""
