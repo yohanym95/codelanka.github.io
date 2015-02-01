@@ -1,6 +1,6 @@
 # CodeLanka
 
-![https://siteup.herokuapp.com/siteup?url=http://codelanka.github.io/](https://siteup.herokuapp.com/siteup.png?url=http://codelanka.github.io/)
+![https://siteup.herokuapp.com/siteup?url=http://codelanka.github.io/](https://siteup.herokuapp.com/siteup?url=http://codelanka.github.io/)
 
 Simple Website for CodeLanka
 
