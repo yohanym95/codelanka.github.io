@@ -1,0 +1,16 @@
+# Welcome to CodeLanka!
+
+# Site settings
+title: Code{Lanka}
+email: codelanaka@gmail.com
+description: Coding to Empower Sri Lanka
+baseurl: "" # the subpath of your site, e.g. /blog
+domain_name: 'http://codelanka.github.io'
+url: 'blog url' # the base hostname & protocol for your site
+twitter_username: codelanaka
+github_username:  codelanaka
+author:         'codelanka'
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
