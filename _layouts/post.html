@@ -1,93 +1,118 @@
 ---
-layout: default
-disqus: false
-archive: false
-post_class: post-template
+layout: blog
+section_id: blog
 ---
 
-<header class="main-header post-head {% if page.cover %}" style="background-image: url({{ page.cover }}) {%else%}no-cover{% endif %}">
-    <nav class="main-nav {% if page.cover %} overlay {% endif %} clearfix">
-        <a class="back-button icon-arrow-left" href="{{ site.baseurl }}">Home</a>
-        <a class="subscribe-button icon-feed" href="{{ site.baseurl }}rss.xml">Subscribe</a>
-    </nav>
-</header>
 
-<main class="content" role="main">
-
-    <article class="post">
-
-        <header class="post-header">
-            <h1 class="post-title">{{ page.title }}</h1>
-            <h2>adasds</h2>
-            <section class="post-meta">                
-                <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
-                {% if page.categories.size > 0 %} 
-                    {{ page.categories | array_to_sentence_string | prepend: 'on ' }} 
-                {% endif %}
-            </section>
-        </header>
-
-<!--         <header class="post-header">
-            <a id="blog-logo" href="{{site.url}}">
-                {% if site.logo %}
-                    <img src="{{site.logo}}" alt="{{ site.name }}" />
-                {% else %}
-                    <span class="blog-title">{{ site.name }}</span>
-                {%endif%} 
-            </a>
-        </header> -->
-        
-        <!-- <span class="post-meta">
-            <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
-            {% if page.categories.size > 0 %} 
-                {{ page.categories | array_to_sentence_string | prepend: 'on ' }} 
-            {% endif %}
-        </span> -->
-
-        <!-- <h1 class="post-title">{{ page.title }}</h1> -->
-
-        <section class="post-content">
-            {{content}}
-        </section>
-
-        {% if page.archive %}
-        <section class="archive">
-            <h5>Archive</h5>
-            <ul>
-                {% for post in site.posts %}
-                    <li><span>{{ post.date | date_to_string }}</span>  <a href="{{ post.url }}">{{ post.title }}</a></li>
-                {% endfor %}    
-            </ul>
-        </section>
-        {% endif %}
-
-        <footer class="post-footer">
-            <!-- If we want to display author's name and bio -->
-            {% if site.author %}
-                <figure class="author-image">
-                    <a class="img" href="{{ site.baseurl }}" style="background-image: url(/assets/images/profile.png)">
-                    <span class="hidden">{{site.author}}'s Picture</span></a>
-                </figure>
-                <section class="author">
-                    <!-- Author Name -->
-                    <h4> {{ site.author }} </h4>
-                    <!-- Author Bio -->
-                    <p> 
-                        Here goes the author description. You might want to place some links too in here
-                    </p>
-                </section>                
-            {% endif %}
-
-            <!-- Share links section -->
-            {% include share.html %}
-            
-            <!-- Disqus comments -->
-            {% if page.disqus %}
-                {% include disqus.html %}
-            {% endif %}
-            
-        </footer>
-
-    </article>
-
-</main>
+<div class='row'>
+  <div class='large-12 columns'>
+    <div class='mod modBlogPost big'>
+      <div class='images'>
+        {% for image in page.images %}
+          <div class='image'><img alt="" src="{{site.url}}/{{image}}" /></div>
+        {% endfor %}
+      </div>
+      <div class='content'>
+        <p class='info'>
+          <span>{{page.date | date: "%B %d, %Y" }}</span>
+          /
+          <span>
+            by {{page.author}}
+          </span>
+          /
+          <span>
+            <a href="#">4 comments</a>
+          </span>
+        </p>
+        <h3><a href="{{page.url}}">{{page.title}}</a></h3>
+        {{ content }}
+      </div>
+    </div>
+    <div class='two spacing'></div>
+    <a id='comments'></a>
+    <div class='comments-wrapper'>
+      <h3 class='comments-count'>6 Comments</h3>
+      <ul class='comments'>
+        <li>
+          <div class='meta'>
+            <p class='avatar'>
+              <img width="39" height="39" alt="" src="{{site.url}}/images/avatar.png" />
+            </p>
+            <p class='info'>
+              <span class='name'>Amy</span>
+              <span class='datetime'>October 15, 2011 at 3:30 pm</span>
+              <a href='#comment-form'>Reply</a>
+            </p>
+          </div>
+          <p>
+            Laudantium et sint repellat eum necessitatibus aut est rem illo delectus saepe. dolor consectetur et dolorem distinctio beatae doloribus magni ducimus reprehenderit voluptatibus ex officia quia. cum facere est quas provident ea nam quibusdam deserunt quis. error quis nihil ad quia corrupti asperiores labore quis error ut debitis nobis iste. laborum sint qui aut asperiores numquam itaque ea illum
+          </p>
+        </li>
+        <li>
+          <div class='meta'>
+            <p class='avatar'>
+              <img width="39" height="39" alt="" src="{{site.url}}/images/avatar.png" />
+            </p>
+            <p class='info'>
+              <span class='name'>Amy</span>
+              <span class='datetime'>October 15, 2011 at 3:30 pm</span>
+              <a href='#comment-form'>Reply</a>
+            </p>
+          </div>
+          <p>Quam cumque magni voluptas. possimus neque in voluptates. quia consequatur voluptas eum aut mollitia ipsa commodi. sint vero earum illo sequi omnis officiis velit nihil dolor quo quisquam sint. impedit ut quisquam sed placeat et quia nam possimus veniam possimus at qui. ipsam architecto ducimus similique modi non autem consequatur soluta</p>
+          <ul class='children'>
+            <li>
+              <div class='meta'>
+                <p class='avatar'>
+                  <img width="39" height="39" alt="" src="{{site.url}}/images/avatar.png" />
+                </p>
+                <p class='info'>
+                  <span class='name'>Amy</span>
+                  <span class='datetime'>October 15, 2011 at 3:30 pm</span>
+                  <a href='#comment-form'>Reply</a>
+                </p>
+              </div>
+              <p>Quas ut vel nobis veniam explicabo consequatur. iusto nisi eius iure voluptas perferendis omnis quod excepturi et eum. sed porro tenetur ut unde suscipit optio ipsum molestiae</p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class='meta'>
+            <p class='avatar'>
+              <img width="39" height="39" alt="" src="{{site.url}}/images/avatar.png" />
+            </p>
+            <p class='info'>
+              <span class='name'>Amy</span>
+              <span class='datetime'>October 15, 2011 at 3:30 pm</span>
+              <a href='#comment-form'>Reply</a>
+            </p>
+          </div>
+          <p>Deleniti omnis magnam officiis tempora et suscipit quam voluptates magni magnam aut recusandae fuga. et molestiae natus harum libero. et dignissimos qui id est natus architecto quisquam non quo voluptas dignissimos et quibusdam. id saepe laudantium ipsum labore dolorum officia et odio debitis et. consequatur non veniam deserunt rerum nihil sint est</p>
+        </li>
+      </ul>
+    </div>
+    <div class='four spacing'></div>
+    <div id='comments-form'>
+      <h3>Your comment</h3>
+      <form accept-charset='UTF-8' action='#' method='post'>
+        <p class='name'>
+          <label for='name'>Your Name</label>
+          <input class='input-text required' id='name' name='name' type='text'>
+        </p>
+        <p class='email'>
+          <label for='email'>Your Email</label>
+          <input class='input-text required' id='email' name='email' type='text'>
+        </p>
+        <p class='message'>
+          <label for='message'>Your Message</label>
+          <textarea class='required' cols='80' id='message' name='message' rows='5'></textarea>
+        </p>
+        <div class='spacing'></div>
+        <p>
+          <input class='button' type='submit' value='Send Message'>
+        </p>
+      </form>
+    </div>
+    <div class='four spacing'></div>
+  </div>
+</div>
