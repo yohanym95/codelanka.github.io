@@ -396,7 +396,7 @@ figure {
   z-index: 2;
   display: block;
   float: right;
-  margin-top: 15px;
+  margin-top: 30px;
 }
 #fh5co-menu-wrap .sf-menu a {
   padding: 1em .75em;
@@ -1468,3 +1468,7 @@ figure {
 }
 
 /*# sourceMappingURL=style.css.map */
+/* custom CSS*/
+.codelankalogo{
+  height: 80px;
+}
