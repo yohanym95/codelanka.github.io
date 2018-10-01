@@ -1480,3 +1480,11 @@ figure {
 .prod-title>p{
   text-align: justify;
 }
+.img-responsive{
+  width: 263.99px;
+  height:263.99px; 
+
+}
+.blog-text{
+  height: 364px;
+}
